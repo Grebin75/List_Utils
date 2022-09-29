@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   list.h                                             :+:      :+:    :+:   */
+/*   lists.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hcoutinh <hcoutinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/20 14:38:27 by hcoutinh          #+#    #+#             */
-/*   Updated: 2022/09/20 16:42:22 by hcoutinh         ###   ########.fr       */
+/*   Created: 2022/09/29 12:19:20 by hcoutinh          #+#    #+#             */
+/*   Updated: 2022/09/29 16:12:07 by hcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIST_H
-# define LIST_H
+#ifndef LISTS_H
+# define LISTS_H
 
 # include <stdlib.h>
 # include <stdio.h>
@@ -25,11 +25,14 @@ struct s_list
 	t_list	*next;
 };
 
-t_list	*createobj(int data);
-t_list	*addtolist(t_list **list, t_list *new);
-t_list	*selectobj(t_list *list, int n);
+t_list	*createnode(int data);
+t_list	*addtolast(t_list **list, t_list *new);
+t_list	*addtostart(t_list **list, t_list *new);
+void	rmlist(t_list **list);
+void	rmnode(t_list **list, int n);
 
-void	freeobj(t_list **list, int n);
-void	freelist(t_list **list);
+t_list	*selectnode(t_list *list, int n);
+int	listsize(t_list *list);
+t_list	**listcall(void);
 
 #endif
