@@ -6,7 +6,7 @@
 /*   By: hcoutinh <hcoutinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:13:43 by hcoutinh          #+#    #+#             */
-/*   Updated: 2022/09/29 16:12:00 by hcoutinh         ###   ########.fr       */
+/*   Updated: 2022/11/07 16:25:16 by hcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	listsize(t_list *list)
 	int		i;
 
 	i = 0;
+	if (!list)
+		return (i);
 	while (list->next && ++i)
 		list = list->next;
 	return (++i);
@@ -40,7 +42,7 @@ t_list	*selectnode(t_list *list, int n)
 
 t_list	**listcall(void)
 {
-	static	t_list list;
+	static t_list	list;
 
 	return (&list);
 }

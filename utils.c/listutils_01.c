@@ -6,7 +6,7 @@
 /*   By: hcoutinh <hcoutinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 13:44:02 by hcoutinh          #+#    #+#             */
-/*   Updated: 2022/09/29 15:54:00 by hcoutinh         ###   ########.fr       */
+/*   Updated: 2022/11/07 16:28:27 by hcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,9 +80,5 @@ void	rmlist(t_list **list)
 	t_list	*tmp;
 
 	while (list)
-	{
-		tmp = *list;
-		*list = (*list)->next;
-		free(tmp);
-	}
+		rmnode(list, 0);
 }
