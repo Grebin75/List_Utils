@@ -6,7 +6,7 @@
 /*   By: hcoutinh <hcoutinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 13:44:02 by hcoutinh          #+#    #+#             */
-/*   Updated: 2022/11/07 16:28:27 by hcoutinh         ###   ########.fr       */
+/*   Updated: 2022/11/07 16:41:00 by hcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	rmnode(t_list **list, int n)
 {
 	t_list	*temp;
 
-	temp = selectobj(*list, n);
+	temp = selecnode(*list, n);
 	if (!temp)
 		return ;
 	if (n > 0)
@@ -77,8 +77,6 @@ void	rmnode(t_list **list, int n)
 // Remove list.
 void	rmlist(t_list **list)
 {
-	t_list	*tmp;
-
 	while (list)
 		rmnode(list, 0);
 }

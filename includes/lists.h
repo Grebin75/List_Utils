@@ -6,7 +6,7 @@
 /*   By: hcoutinh <hcoutinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:19:20 by hcoutinh          #+#    #+#             */
-/*   Updated: 2022/09/29 16:12:07 by hcoutinh         ###   ########.fr       */
+/*   Updated: 2022/11/07 16:40:51 by hcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	rmlist(t_list **list);
 void	rmnode(t_list **list, int n);
 
 t_list	*selectnode(t_list *list, int n);
-int	listsize(t_list *list);
-t_list	**listcall(void);
+int		listsize(t_list *list);
+t_list	*listcall(void);
 
 #endif
